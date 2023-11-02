@@ -1,0 +1,25 @@
+﻿@page
+@model MessageWallRazorPages.Pages.AddressPageModel
+@{
+}
+
+
+<h1>Use this page for leaving your address information </h1>
+
+
+<form method="post">
+    <div class="form-group">
+        <input asp-for="StreetName" type="text" placeholder="Street name" />
+
+        <input asp-for="HouseNr" type="text" placeholder="House nr" />
+
+        <input asp-for="PostCode" type="text" placeholder="Postcode" />
+
+        <input asp-for="City" type="text" placeholder="City" />
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+
