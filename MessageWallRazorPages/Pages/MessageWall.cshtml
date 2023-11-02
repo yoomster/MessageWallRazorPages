@@ -2,3 +2,21 @@
 @model MessageWallRazorPages.Pages.MessageWallModel
 @{
 }
+
+<h1>Message Wall</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Message" />
+        <input asp-for="Message" type="text" placeholder="Type your message"/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    <h2>Messages:</h2>
+
+    @foreach (var item in Model.Messages)
+    {
+        <h3>@item</h3>
+    }
+
+</form>
