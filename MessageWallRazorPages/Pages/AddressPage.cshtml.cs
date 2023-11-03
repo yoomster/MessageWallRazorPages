@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using WPFMessageWallLibrary;
 
 namespace MessageWallRazorPages.Pages
 {
@@ -7,14 +8,7 @@ namespace MessageWallRazorPages.Pages
     {
 
         [BindProperty]
-        public string StreetName { get; set; }
-        [BindProperty]
-        public string HouseNr { get; set; }
-        [BindProperty]
-        public string PostCode { get; set; }
-        [BindProperty]
-        public string City { get; set; }
-
+        public AddressModel Address { get; set; }
 
         public void OnGet()
         {
@@ -22,7 +16,12 @@ namespace MessageWallRazorPages.Pages
 
         public IActionResult OnPost()
         {
-            return Page();
+            if (ModelState.IsValid == false)
+            {
+                return Page();
+            }
+            //should save to a DB eventually
+            return RedirectToPage("./Index");
         }
     }
 }

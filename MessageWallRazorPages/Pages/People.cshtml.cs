@@ -21,6 +21,7 @@ namespace MessageWallRazorPages.Pages
                 return Page();
             }
 
+            //should save to a DB eventually
             return RedirectToPage("./AddressPage");
         }
     }
