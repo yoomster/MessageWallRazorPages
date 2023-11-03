@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="WPFMessageWallLibrary.csproj" />
+    <Reference Include="WPFMessageWallLibrary">
+      <HintPath>WPFMessageWallLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

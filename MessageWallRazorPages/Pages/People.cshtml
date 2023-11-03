@@ -1,0 +1,24 @@
+﻿@page
+@model MessageWallRazorPages.Pages.PeopleModel
+@{
+}
+
+<h1>Welcome, please leave your personal information here: </h1>
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Person.FirstName"> </label>
+        <input asp-for="Person.FirstName" type="text" placeholder="First name" />
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Person.LastName"> </label>
+        <input asp-for="Person.LastName" type="text" placeholder="Last name" />
+    </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+
